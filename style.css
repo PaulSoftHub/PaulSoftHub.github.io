@@ -1,6 +1,6 @@
 /* =========================================
    PAULSOFTHUB PORTFOLIO
-   Global Styles
+   Global Styles — Compact Eye & Window Friendly
 ========================================= */
 
 :root {
@@ -12,9 +12,12 @@
     --accent: #1f4f8a;
     --accent-dark: #163b69;
     --white: #ffffff;
-    --max-width: 1180px;
-    --radius: 14px;
-    --shadow: 0 10px 30px rgba(20, 35, 55, 0.08);
+
+    --max-width: 1140px;
+    --reading-width: 800px;
+
+    --radius: 11px;
+    --shadow: 0 5px 16px rgba(20, 35, 55, 0.055);
 }
 
 
@@ -30,6 +33,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -44,7 +48,12 @@ body {
 
     background: var(--bg);
     color: var(--text);
-    line-height: 1.7;
+
+    font-size: 0.92rem;
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 a {
@@ -77,22 +86,22 @@ img {
     top: 0;
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid var(--border);
 }
 
 .navigation {
-    min-height: 76px;
+    min-height: 62px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 24px;
 }
 
 .brand {
-    font-size: 1.35rem;
+    font-size: 1.10rem;
     font-weight: 800;
     letter-spacing: -0.02em;
 }
@@ -100,14 +109,16 @@ img {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 28px;
 
-    font-size: 0.95rem;
+    gap: 20px;
+
+    font-size: 0.84rem;
     font-weight: 600;
 }
 
 .nav-menu a {
     color: var(--text-soft);
+
     transition: color 0.2s ease;
 }
 
@@ -121,7 +132,7 @@ img {
 ========================================= */
 
 .hero {
-    min-height: 78vh;
+    min-height: 57vh;
 
     display: flex;
     align-items: center;
@@ -136,43 +147,45 @@ img {
 }
 
 .hero-content {
-    max-width: 900px;
-    padding: 100px 0;
+    max-width: 820px;
+    padding: 68px 0;
 }
 
 .eyebrow {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 
     color: var(--accent);
 
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.10em;
 }
 
 .hero h1 {
-    max-width: 900px;
+    max-width: 820px;
 
-    font-size: clamp(2.6rem, 6vw, 5rem);
-    line-height: 1.08;
-    letter-spacing: -0.045em;
+    font-size: clamp(2rem, 3.7vw, 3.2rem);
+    line-height: 1.10;
+    letter-spacing: -0.035em;
 
-    margin-bottom: 28px;
+    margin-bottom: 17px;
 }
 
 .hero-description {
-    max-width: 760px;
+    max-width: 720px;
 
     color: var(--text-soft);
-    font-size: 1.15rem;
 
-    margin-bottom: 36px;
+    font-size: 0.96rem;
+    line-height: 1.65;
+
+    margin-bottom: 24px;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 10px;
 }
 
 
@@ -185,13 +198,13 @@ img {
     align-items: center;
     justify-content: center;
 
-    min-height: 48px;
-    padding: 0 22px;
+    min-height: 42px;
+    padding: 0 18px;
 
-    border-radius: 8px;
+    border-radius: 7px;
 
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.86rem;
 
     transition:
         transform 0.2s ease,
@@ -200,7 +213,7 @@ img {
 }
 
 .button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .button.primary {
@@ -228,7 +241,7 @@ img {
 ========================================= */
 
 .section {
-    padding: 100px 0;
+    padding: 66px 0;
 }
 
 .section-alt {
@@ -236,30 +249,32 @@ img {
 }
 
 .section-heading {
-    max-width: 780px;
-    margin-bottom: 48px;
+    max-width: 760px;
+    margin-bottom: 30px;
 }
 
 .section-heading h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-    letter-spacing: -0.03em;
+    font-size: clamp(1.48rem, 2.8vw, 2.05rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
 }
 
 
 /* =========================================
-   ABOUT
+   ABOUT / GENERAL READING CONTENT
 ========================================= */
 
 .about-content {
-    max-width: 820px;
+    max-width: var(--reading-width);
 
     color: var(--text-soft);
-    font-size: 1.08rem;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
 }
 
 .about-content p + p {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 
@@ -273,11 +288,11 @@ img {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 16px;
 }
 
 .feature-card {
-    padding: 30px;
+    padding: 21px;
 
     background: var(--white);
     border: 1px solid var(--border);
@@ -287,14 +302,17 @@ img {
 }
 
 .feature-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
-    font-size: 1.15rem;
+    font-size: 0.98rem;
+    line-height: 1.35;
 }
 
 .feature-card p {
     color: var(--text-soft);
-    font-size: 0.96rem;
+
+    font-size: 0.86rem;
+    line-height: 1.6;
 }
 
 
@@ -308,11 +326,11 @@ img {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 24px;
+    gap: 18px;
 }
 
 .project-card {
-    padding: 34px;
+    padding: 25px;
 
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -325,42 +343,46 @@ img {
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow);
 }
 
 .project-category {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 
     color: var(--accent);
 
-    font-size: 0.75rem;
+    font-size: 0.66rem;
     font-weight: 800;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
 }
 
 .project-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
-    font-size: 1.45rem;
+    font-size: 1.12rem;
+    line-height: 1.35;
 }
 
 .project-card p {
     color: var(--text-soft);
+
+    font-size: 0.88rem;
+    line-height: 1.6;
 }
 
 .project-status {
     display: inline-block;
 
-    margin-top: 20px;
-    padding: 5px 10px;
+    margin-top: 14px;
+    padding: 3px 8px;
 
     border: 1px solid var(--border);
     border-radius: 999px;
 
     color: var(--text-soft);
 
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     font-weight: 600;
 }
 
@@ -375,13 +397,13 @@ img {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 24px;
+    gap: 18px;
 }
 
 .case-card {
     position: relative;
 
-    padding: 34px;
+    padding: 25px;
 
     background: var(--white);
     border: 1px solid var(--border);
@@ -391,23 +413,27 @@ img {
 .case-number {
     display: block;
 
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 
     color: var(--accent);
 
-    font-size: 0.8rem;
+    font-size: 0.68rem;
     font-weight: 800;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
 }
 
 .case-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
-    font-size: 1.35rem;
+    font-size: 1.04rem;
+    line-height: 1.35;
 }
 
 .case-card p {
     color: var(--text-soft);
+
+    font-size: 0.88rem;
+    line-height: 1.6;
 }
 
 
@@ -418,17 +444,17 @@ img {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
 }
 
 .skills-list span {
-    padding: 10px 16px;
+    padding: 7px 11px;
 
     background: var(--bg-soft);
     border: 1px solid var(--border);
     border-radius: 999px;
 
-    font-size: 0.9rem;
+    font-size: 0.80rem;
     font-weight: 600;
 }
 
@@ -443,7 +469,7 @@ img {
 }
 
 .contact-content {
-    max-width: 760px;
+    max-width: 700px;
     text-align: center;
 }
 
@@ -453,14 +479,17 @@ img {
 }
 
 .contact-content h2 {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
+    font-size: clamp(1.58rem, 2.8vw, 2.08rem);
+    line-height: 1.18;
 }
 
 .contact-content p {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
+
+    font-size: 0.90rem;
+    line-height: 1.65;
 
     opacity: 0.9;
 }
@@ -480,7 +509,7 @@ img {
 ========================================= */
 
 .site-footer {
-    padding: 45px 0 25px;
+    padding: 34px 0 20px;
 
     background: #111827;
     color: #ffffff;
@@ -491,25 +520,30 @@ img {
     align-items: flex-start;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 24px;
 
-    padding-bottom: 30px;
+    padding-bottom: 23px;
 }
 
 .footer-content strong {
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
 .footer-content p {
     max-width: 600px;
-    margin-top: 8px;
+
+    margin-top: 6px;
 
     color: #b9c2cf;
-    font-size: 0.9rem;
+
+    font-size: 0.80rem;
+    line-height: 1.55;
 }
 
 .footer-content a {
     color: #ffffff;
+
+    font-size: 0.84rem;
     font-weight: 700;
 }
 
@@ -518,14 +552,15 @@ img {
 }
 
 .copyright {
-    padding-top: 20px;
+    padding-top: 16px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .copyright p {
     color: #9ca7b5;
-    font-size: 0.82rem;
+
+    font-size: 0.72rem;
 }
 
 
@@ -541,7 +576,7 @@ img {
     }
 
     .nav-menu {
-        gap: 16px;
+        gap: 15px;
     }
 
     .hero {
@@ -557,10 +592,14 @@ img {
 
 @media (max-width: 700px) {
 
+    .container {
+        width: min(92%, 680px);
+    }
+
     .navigation {
         min-height: auto;
 
-        padding: 18px 0;
+        padding: 14px 0;
 
         flex-direction: column;
         align-items: flex-start;
@@ -570,15 +609,33 @@ img {
         width: 100%;
 
         flex-wrap: wrap;
-        gap: 12px 18px;
+        gap: 9px 14px;
+
+        font-size: 0.80rem;
     }
 
     .hero-content {
-        padding: 80px 0;
+        padding: 58px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.90rem;
     }
 
     .section {
-        padding: 75px 0;
+        padding: 52px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.58rem;
     }
 
     .feature-grid,
@@ -587,16 +644,34 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 2.7rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
+    .feature-card,
+    .project-card,
+    .case-card {
+        padding: 20px;
     }
 
     .footer-content {
         flex-direction: column;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY / READING COMFORT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
     }
 
 }
