@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Contact | PaulSoftHub</title>
 
@@ -11,32 +16,75 @@
         content="Connect with PaulSoftHub for professional conversations, collaboration, AI, digital transformation, executive systems, and operational excellence."
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- =====================================================
+         CLOUDFLARE TURNSTILE
+    ====================================================== -->
+
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+    ></script>
+
 </head>
 
-<body>
 
-    <!-- =========================
+<body class="contact-page">
+
+
+    <!-- =====================================================
          HEADER / NAVIGATION
-    ========================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
         <div class="container navigation">
 
-            <a href="index.html" class="brand">
+            <a
+                href="index.html"
+                class="brand"
+            >
                 PaulSoftHub
             </a>
 
-            <nav class="nav-menu" aria-label="Main navigation">
 
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="ai-pe-os.html">AI PE-OS</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="skills.html">Skills</a>
-                <a href="contact.html">Contact</a>
+            <nav
+                class="nav-menu"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="ai-pe-os.html">
+                    AI PE-OS
+                </a>
+
+                <a href="case-studies.html">
+                    Case Studies
+                </a>
+
+                <a href="skills.html">
+                    Skills
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </nav>
 
@@ -47,9 +95,10 @@
 
     <main>
 
-        <!-- =========================
+
+        <!-- =================================================
              PAGE HERO
-        ========================== -->
+        ================================================== -->
 
         <section class="hero">
 
@@ -74,11 +123,11 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              CONTACT INTRODUCTION
-        ========================== -->
+        ================================================== -->
 
-        <section class="section">
+        <section class="section contact-intro">
 
             <div class="container">
 
@@ -94,11 +143,12 @@
 
                 </div>
 
+
                 <div class="about-content">
 
                     <p>
-                        This portfolio presents selected work across AI,
-                        digital transformation, executive systems,
+                        This portfolio presents selected work across
+                        AI, digital transformation, executive systems,
                         prompt engineering, automation, and operational
                         excellence.
                     </p>
@@ -107,8 +157,7 @@
                         If you would like to discuss a project,
                         collaboration opportunity, professional idea,
                         or practical application of these systems,
-                        please use one of the public contact channels
-                        provided below.
+                        please use the contact form below.
                     </p>
 
                 </div>
@@ -118,94 +167,444 @@
         </section>
 
 
-        <!-- =========================
-             CONTACT OPTIONS
-        ========================== -->
+        <!-- =================================================
+             DIRECT CONTACT
+        ================================================== -->
 
         <section class="section section-alt">
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="contact-layout">
 
-                    <p class="eyebrow">
-                        CONTACT OPTIONS
-                    </p>
 
-                    <h2>
-                        Connect Through Public Channels
-                    </h2>
+                    <!-- =====================================
+                         LEFT PANEL — CONTACT FORM
+                    ====================================== -->
 
-                </div>
+                    <div class="contact-panel">
 
-                <div class="feature-grid">
+                        <div class="section-heading">
 
-                    <!-- GitHub -->
+                            <p class="eyebrow">
+                                DIRECT CONTACT
+                            </p>
 
-                    <article class="feature-card">
+                            <h2>
+                                Send a Message
+                            </h2>
 
-                        <h3>
-                            GitHub
-                        </h3>
+                            <p>
+                                Please complete the form below.
+                                Your message will be securely
+                                submitted for review.
+                            </p>
 
-                        <p>
-                            Explore selected public projects,
-                            documentation, experiments, and
-                            portfolio work.
-                        </p>
+                        </div>
 
-                        <a
-                            href="https://github.com/PaulSoftHub"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary"
+
+                        <!-- =================================
+                             FORM
+                        ================================== -->
+
+                        <form
+                            id="contactForm"
+                            class="contact-form"
+                            novalidate
                         >
-                            Visit GitHub
-                        </a>
-
-                    </article>
 
 
-                    <!-- LinkedIn -->
+                            <!-- =============================
+                                 NAME + EMAIL
+                            ============================== -->
 
-                    <article class="feature-card">
-
-                        <h3>
-                            LinkedIn
-                        </h3>
-
-                        <p>
-                            Professional networking information
-                            can be added here when the public
-                            profile link is ready.
-                        </p>
-
-                        <span class="project-status">
-                            Link Coming Soon
-                        </span>
-
-                    </article>
+                            <div class="form-row">
 
 
-                    <!-- Email -->
+                                <!-- NAME -->
 
-                    <article class="feature-card">
+                                <div class="form-group">
 
-                        <h3>
-                            Professional Email
-                        </h3>
+                                    <label for="name">
+                                        Name
+                                        <span
+                                            aria-hidden="true"
+                                        >*</span>
+                                    </label>
 
-                        <p>
-                            A public professional email address can
-                            be added here when you decide which
-                            address should be published.
-                        </p>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        maxlength="100"
+                                        autocomplete="name"
+                                        placeholder="Your full name"
+                                        required
+                                    >
 
-                        <span class="project-status">
-                            Available on Request
-                        </span>
+                                </div>
 
-                    </article>
+
+                                <!-- EMAIL -->
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email
+                                        <span
+                                            aria-hidden="true"
+                                        >*</span>
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        maxlength="254"
+                                        autocomplete="email"
+                                        placeholder="your.email@example.com"
+                                        required
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- =============================
+                                 PHONE + ORGANIZATION
+                            ============================== -->
+
+                            <div class="form-row">
+
+
+                                <!-- PHONE -->
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        maxlength="14"
+                                        inputmode="numeric"
+                                        autocomplete="tel"
+                                        placeholder="Maximum 14 digits"
+                                    >
+
+                                </div>
+
+
+                                <!-- ORGANIZATION -->
+
+                                <div class="form-group">
+
+                                    <label for="organization">
+                                        Organization
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="organization"
+                                        name="organization"
+                                        maxlength="200"
+                                        autocomplete="organization"
+                                        placeholder="Your organization / company"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- =============================
+                                 SUBJECT
+                            ============================== -->
+
+                            <div class="form-group">
+
+                                <label for="subject">
+                                    Subject
+                                    <span
+                                        aria-hidden="true"
+                                    >*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    maxlength="200"
+                                    placeholder="Subject of your message"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- =============================
+                                 MESSAGE
+                            ============================== -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                    <span
+                                        aria-hidden="true"
+                                    >*</span>
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    maxlength="5000"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- =============================
+                                 HONEYPOT
+                                 Anti-spam field
+                            ============================== -->
+
+                            <div
+                                aria-hidden="true"
+                                style="
+                                    position:absolute;
+                                    left:-9999px;
+                                    width:1px;
+                                    height:1px;
+                                    overflow:hidden;
+                                "
+                            >
+
+                                <label for="website">
+                                    Website
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="website"
+                                    name="website"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+
+                            <!-- =============================
+                                 CLOUDFLARE TURNSTILE
+                            ============================== -->
+
+                            <div class="form-group">
+
+                                <div
+                                    class="cf-turnstile"
+                                    id="turnstileWidget"
+                                    data-sitekey="0x4AAAAAAEWkx1OJYNOMs3d9"
+                                    data-theme="auto"
+                                ></div>
+
+                            </div>
+
+
+                            <!-- =============================
+                                 STATUS MESSAGE
+                            ============================== -->
+
+                            <div
+                                id="formStatus"
+                                role="status"
+                                aria-live="polite"
+                                style="display:none;"
+                            ></div>
+
+
+                            <!-- =============================
+                                 SUBMIT BUTTON
+                            ============================== -->
+
+                            <div class="button-group">
+
+                                <button
+                                    type="submit"
+                                    id="submitButton"
+                                    class="button primary"
+                                >
+                                    Send Message
+                                </button>
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         RIGHT PANEL — CONTACT OPTIONS
+                    ====================================== -->
+
+                    <div class="contact-panel">
+
+                        <div class="section-heading">
+
+                            <p class="eyebrow">
+                                CONTACT OPTIONS
+                            </p>
+
+                            <h2>
+                                Connect Through Public Channels
+                            </h2>
+
+                        </div>
+
+
+                        <div class="contact-options">
+
+
+                            <!-- =============================
+                                 GITHUB
+                            ============================== -->
+
+                            <article class="contact-option">
+
+                                <div class="contact-option-header">
+
+                                    <div
+                                        class="contact-option-icon"
+                                        aria-hidden="true"
+                                    >
+                                        ◉
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3>
+                                            GitHub
+                                        </h3>
+
+                                        <p>
+                                            Explore selected public
+                                            projects, documentation,
+                                            experiments, and portfolio
+                                            work.
+                                        </p>
+
+                                        <a
+                                            href="https://github.com/PaulSoftHub"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="button secondary"
+                                        >
+                                            Visit GitHub →
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =============================
+                                 LINKEDIN
+                            ============================== -->
+
+                            <article class="contact-option">
+
+                                <div class="contact-option-header">
+
+                                    <div
+                                        class="contact-option-icon"
+                                        aria-hidden="true"
+                                    >
+                                        in
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3>
+                                            LinkedIn
+                                        </h3>
+
+                                        <p>
+                                            Professional networking
+                                            information can be added
+                                            here when the public profile
+                                            link is ready.
+                                        </p>
+
+                                        <span class="project-status">
+                                            Link Coming Soon
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =============================
+                                 PROFESSIONAL EMAIL
+                            ============================== -->
+
+                            <article class="contact-option">
+
+                                <div class="contact-option-header">
+
+                                    <div
+                                        class="contact-option-icon"
+                                        aria-hidden="true"
+                                    >
+                                        ✉
+                                    </div>
+
+
+                                    <div>
+
+                                        <h3>
+                                            Professional Email
+                                        </h3>
+
+                                        <p>
+                                            A public professional email
+                                            address can be added here
+                                            when you decide which address
+                                            should be published.
+                                        </p>
+
+                                        <span class="project-status">
+                                            Available on Request
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -214,9 +613,9 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              AREAS OF INTEREST
-        ========================== -->
+        ================================================== -->
 
         <section class="section">
 
@@ -234,7 +633,11 @@
 
                 </div>
 
-                <div class="case-study-grid">
+
+                <div class="contact-interest-grid">
+
+
+                    <!-- 01 -->
 
                     <article class="case-card">
 
@@ -255,6 +658,8 @@
                     </article>
 
 
+                    <!-- 02 -->
+
                     <article class="case-card">
 
                         <span class="case-number">
@@ -267,12 +672,14 @@
 
                         <p>
                             Turning business and management requirements
-                            into structured digital systems and
-                            practical workflows.
+                            into structured digital systems and practical
+                            workflows.
                         </p>
 
                     </article>
 
+
+                    <!-- 03 -->
 
                     <article class="case-card">
 
@@ -293,6 +700,8 @@
                     </article>
 
 
+                    <!-- 04 -->
+
                     <article class="case-card">
 
                         <span class="case-number">
@@ -310,6 +719,7 @@
 
                     </article>
 
+
                 </div>
 
             </div>
@@ -317,40 +727,43 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              PRIVACY
-        ========================== -->
+        ================================================== -->
 
         <section class="section section-alt">
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="contact-privacy">
 
-                    <p class="eyebrow">
-                        PRIVACY
-                    </p>
+                    <div class="section-heading">
 
-                    <h2>
-                        Public by Design, Private by Default
-                    </h2>
+                        <p class="eyebrow">
+                            PRIVACY
+                        </p>
 
-                </div>
+                        <h2>
+                            Public by Design, Private by Default
+                        </h2>
 
-                <div class="about-content">
+                    </div>
 
-                    <p>
-                        This website is a public portfolio. Private
-                        repositories, confidential business information,
-                        proprietary instructions, internal records,
-                        credentials, and sensitive operational data are
-                        intentionally excluded.
-                    </p>
 
                     <p>
-                        Contact information will only be published when
-                        it is intentionally selected for public professional
-                        use.
+                        This website is a public portfolio.
+                        Private repositories, confidential business
+                        information, proprietary instructions,
+                        internal records, credentials, and sensitive
+                        operational data are intentionally excluded.
+                    </p>
+
+
+                    <p>
+                        Contact information submitted through this form
+                        is intended for professional communication and
+                        will be handled through the private backend
+                        system.
                     </p>
 
                 </div>
@@ -360,9 +773,9 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              FINAL CALL TO ACTION
-        ========================== -->
+        ================================================== -->
 
         <section class="section contact-section">
 
@@ -380,6 +793,7 @@
                     Explore the projects, case studies, and capabilities
                     presented throughout the portfolio.
                 </p>
+
 
                 <div class="button-group">
 
@@ -403,16 +817,18 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
     <footer class="site-footer">
 
         <div class="container footer-content">
+
 
             <div>
 
@@ -427,6 +843,7 @@
 
             </div>
 
+
             <div>
 
                 <a
@@ -438,6 +855,7 @@
                 </a>
 
             </div>
+
 
         </div>
 
@@ -451,6 +869,625 @@
         </div>
 
     </footer>
+
+
+    <!-- =====================================================
+         CONTACT FORM JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* ====================================================
+           GOOGLE APPS SCRIPT WEB APP
+        ====================================================
+
+           This is the PUBLIC Apps Script Web App endpoint.
+
+           The Google Sheet itself remains PRIVATE.
+
+        ==================================================== */
+
+        const CONTACT_BACKEND_URL =
+            'https://script.google.com/macros/s/AKfycbzY3ZSwkfBnOhaSu0OmpNv1VncdXG-xSJmDWFMp4CpN0YBYxgHJrwTQehTaKkzMK7_xXQ/exec';
+
+
+        /* ====================================================
+           DOM ELEMENTS
+        ==================================================== */
+
+        const contactForm =
+            document.getElementById(
+                'contactForm'
+            );
+
+
+        const submitButton =
+            document.getElementById(
+                'submitButton'
+            );
+
+
+        const formStatus =
+            document.getElementById(
+                'formStatus'
+            );
+
+
+        /* ====================================================
+           SHOW STATUS
+        ==================================================== */
+
+        function showStatus(
+            message,
+            success
+        ) {
+
+            formStatus.textContent =
+                message;
+
+
+            formStatus.style.display =
+                'block';
+
+
+            formStatus.setAttribute(
+                'data-status',
+                success
+                    ? 'success'
+                    : 'error'
+            );
+
+        }
+
+
+        /* ====================================================
+           CLEAR STATUS
+        ==================================================== */
+
+        function clearStatus() {
+
+            formStatus.textContent =
+                '';
+
+            formStatus.style.display =
+                'none';
+
+            formStatus.removeAttribute(
+                'data-status'
+            );
+
+        }
+
+
+        /* ====================================================
+           GET TURNSTILE TOKEN
+        ==================================================== */
+
+        function getTurnstileToken() {
+
+            const responseElement =
+                document.querySelector(
+                    '[name="cf-turnstile-response"]'
+                );
+
+
+            if (
+                !responseElement
+            ) {
+
+                return '';
+
+            }
+
+
+            return responseElement.value.trim();
+
+        }
+
+
+        /* ====================================================
+           RESET TURNSTILE
+        ==================================================== */
+
+        function resetTurnstile() {
+
+            if (
+                typeof turnstile !==
+                'undefined'
+            ) {
+
+                try {
+
+                    turnstile.reset();
+
+                } catch (error) {
+
+                    console.warn(
+                        'Unable to reset Turnstile:',
+                        error
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        /* ====================================================
+           FORM SUBMISSION
+        ==================================================== */
+
+        contactForm.addEventListener(
+            'submit',
+            async function(event) {
+
+                event.preventDefault();
+
+
+                clearStatus();
+
+
+                /* ============================================
+                   COLLECT FORM FIELDS
+                ============================================= */
+
+                const name =
+                    document
+                        .getElementById('name')
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById('email')
+                        .value
+                        .trim();
+
+
+                const phone =
+                    document
+                        .getElementById('phone')
+                        .value
+                        .trim();
+
+
+                const organization =
+                    document
+                        .getElementById('organization')
+                        .value
+                        .trim();
+
+
+                const subject =
+                    document
+                        .getElementById('subject')
+                        .value
+                        .trim();
+
+
+                const message =
+                    document
+                        .getElementById('message')
+                        .value
+                        .trim();
+
+
+                const website =
+                    document
+                        .getElementById('website')
+                        .value
+                        .trim();
+
+
+                /* ============================================
+                   FRONTEND REQUIRED-FIELD VALIDATION
+                ============================================= */
+
+                if (
+                    !name ||
+                    !email ||
+                    !subject ||
+                    !message
+                ) {
+
+                    showStatus(
+                        'Please complete all required fields.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   NAME LENGTH
+                ============================================= */
+
+                if (
+                    name.length > 100
+                ) {
+
+                    showStatus(
+                        'Name is too long.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   EMAIL LENGTH
+                ============================================= */
+
+                if (
+                    email.length > 254
+                ) {
+
+                    showStatus(
+                        'Email address is too long.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   PHONE VALIDATION
+                ============================================= */
+
+                if (
+                    phone !== '' &&
+                    !/^\d{1,14}$/.test(phone)
+                ) {
+
+                    showStatus(
+                        'Phone number must contain digits only and be maximum 14 digits.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   ORGANIZATION LENGTH
+                ============================================= */
+
+                if (
+                    organization.length > 200
+                ) {
+
+                    showStatus(
+                        'Organization name is too long.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   SUBJECT LENGTH
+                ============================================= */
+
+                if (
+                    subject.length > 200
+                ) {
+
+                    showStatus(
+                        'Subject is too long.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   MESSAGE LENGTH
+                ============================================= */
+
+                if (
+                    message.length > 5000
+                ) {
+
+                    showStatus(
+                        'Message is too long.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   EMAIL FORMAT
+                ============================================= */
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (
+                    !emailPattern.test(email)
+                ) {
+
+                    showStatus(
+                        'Please provide a valid email address.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   HONEYPOT CHECK
+                ============================================= */
+
+                if (
+                    website !== ''
+                ) {
+
+                    showStatus(
+                        'Submission rejected.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   GET TURNSTILE TOKEN
+                ============================================= */
+
+                const turnstileToken =
+                    getTurnstileToken();
+
+
+                if (
+                    !turnstileToken
+                ) {
+
+                    showStatus(
+                        'Please complete the security verification.',
+                        false
+                    );
+
+                    return;
+
+                }
+
+
+                /* ============================================
+                   DISABLE SUBMIT BUTTON
+                ============================================= */
+
+                submitButton.disabled =
+                    true;
+
+
+                submitButton.textContent =
+                    'Sending...';
+
+
+                try {
+
+
+                    /* ========================================
+                       BUILD PAYLOAD
+
+                       IMPORTANT:
+
+                       These names MUST match Code.gs:
+
+                       name
+                       email
+                       phone
+                       organization
+                       subject
+                       message
+                       website
+                       turnstileToken
+                    ========================================= */
+
+                    const payload = {
+
+                        name:
+                            name,
+
+                        email:
+                            email,
+
+                        phone:
+                            phone,
+
+                        organization:
+                            organization,
+
+                        subject:
+                            subject,
+
+                        message:
+                            message,
+
+                        website:
+                            website,
+
+                        turnstileToken:
+                            turnstileToken
+
+                    };
+
+
+                    /* ========================================
+                       SEND TO APPS SCRIPT
+                    ========================================= */
+
+                    const response =
+                        await fetch(
+                            CONTACT_BACKEND_URL,
+                            {
+
+                                method:
+                                    'POST',
+
+                                headers: {
+
+                                    'Content-Type':
+                                        'text/plain;charset=utf-8'
+
+                                },
+
+                                body:
+                                    JSON.stringify(
+                                        payload
+                                    )
+
+                            }
+                        );
+
+
+                    /* ========================================
+                       READ RESPONSE
+                    ========================================= */
+
+                    const responseText =
+                        await response.text();
+
+
+                    let result;
+
+
+                    try {
+
+                        result =
+                            JSON.parse(
+                                responseText
+                            );
+
+                    } catch (
+                        parseError
+                    ) {
+
+                        console.error(
+                            'Invalid backend response:',
+                            responseText
+                        );
+
+
+                        throw new Error(
+                            'Invalid response from contact service.'
+                        );
+
+                    }
+
+
+                    /* ========================================
+                       BACKEND SUCCESS
+                    ======================================== */
+
+                    if (
+                        result.success === true
+                    ) {
+
+                        showStatus(
+                            'Thank you. Your message has been submitted successfully.',
+                            true
+                        );
+
+
+                        /* Clear form */
+
+                        contactForm.reset();
+
+
+                        /* Reset Turnstile */
+
+                        resetTurnstile();
+
+
+                    }
+
+
+                    /* ========================================
+                       BACKEND FAILURE
+                    ======================================== */
+
+                    else {
+
+                        showStatus(
+                            result.error ||
+                            'Unable to submit your message. Please try again.',
+                            false
+                        );
+
+
+                        /*
+                         * Turnstile tokens are normally
+                         * single-use. Reset after a failed
+                         * backend verification so the visitor
+                         * can obtain a fresh token.
+                         */
+
+                        resetTurnstile();
+
+                    }
+
+
+                } catch (
+                    error
+                ) {
+
+                    console.error(
+                        'Contact form error:',
+                        error
+                    );
+
+
+                    showStatus(
+                        'Unable to connect to the contact service. Please try again later.',
+                        false
+                    );
+
+
+                    resetTurnstile();
+
+
+                } finally {
+
+                    /* ========================================
+                       RE-ENABLE BUTTON
+                    ========================================= */
+
+                    submitButton.disabled =
+                        false;
+
+
+                    submitButton.textContent =
+                        'Send Message';
+
+                }
+
+            }
+        );
+
+    </script>
+
 
 </body>
 </html>
